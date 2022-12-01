@@ -1,0 +1,145 @@
+html {
+  height: 100%;
+  min-height: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+body{
+    height: 100%;
+    margin: 0px;
+    text-align: center;
+  }
+
+  /* button */
+  .btn {
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    background: #cf8504;
+    background-image: -webkit-linear-gradient(top, #cf8504, #945f05);
+    background-image: -moz-linear-gradient(top, #cf8504, #945f05);
+    background-image: -ms-linear-gradient(top, #cf8504, #945f05);
+    background-image: -o-linear-gradient(top, #cf8504, #945f05);
+    background-image: linear-gradient(to bottom, #cf8504, #945f05);
+    border-radius: 8px;
+    color: #ffffff;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 10px 20px 10px 20px;
+  }
+  
+  .btn:hover {
+    background: #a66805;
+    background-image: -webkit-linear-gradient(top, #a66805, #573501);
+    background-image: -moz-linear-gradient(top, #a66805, #573501);
+    background-image: -ms-linear-gradient(top, #a66805, #573501);
+    background-image: -o-linear-gradient(top, #a66805, #573501);
+    background-image: linear-gradient(to bottom, #a66805, #573501);
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  /* text stuff */
+  a{
+    color:darkolivegreen ;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 5px;
+    text-decoration: none;
+  }
+  a:hover{
+    color: cadetblue;
+  }
+  h1,h2,h3,h4{
+    color:rgb(241, 173, 114) ;
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+  }
+  p{
+    color:darkslategrey ;
+  }
+  /* the name */
+  h1{
+    color: rgb(222, 184, 135);
+    font-size: 5rem;
+    margin: 50px auto 0 auto;
+  }
+  h2{
+    font-size: 2rem;
+  }
+  h3{
+    font-size: 1.5rem;
+  }
+  p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin: 15px auto 0 auto;
+  }
+  hr{
+    color: #ffffff;
+    border: solid;
+    border-color: #ffffff;
+    margin: 0;
+    padding: 0.5px;
+  }
+
+  /* containers are for dividing the page into three parts */
+  .top_container{
+    height: 100%;
+    background-color:linen;
+    padding-top: 10px;
+    padding-bottom: 25px;
+    position: relative;
+  }
+  /* hello and nickname */
+  .intro{
+    position: relative;
+    top: 200px;
+  }
+
+  .mid_container{
+    background-color:antiquewhite;
+    margin-top: 0;  
+    position: relative;
+  }
+  /* parent----
+  1. is relative to top-container
+  2.contains the foreground king and the background castle,
+  creating a group(div) together */
+  .parent {
+    display: inline-block;
+    position: relative;
+    padding-top: 0px;
+    top: 100px;
+  }
+  .bg {
+    position: relative;
+    top:100px
+  }
+  .fg {
+    position: absolute;
+    top: 250px;
+    left: 55px;
+    height: 150px;
+    width: 150px;
+  }
+  .profile{
+    padding-bottom: 50px;
+  }
+  /* skills div inside mid_container */
+  .skills{
+    display: flex;
+  }
+  .skill-row{
+    flex: 1;
+    padding: 1em;
+  }
+
+  .bottom_container{
+    position: relative;
+    /* top: -28px; */
+    background-color: blanchedalmond;
+  }
+
+ 
