@@ -2,9 +2,9 @@ import React from 'react';
 import mp from '../assets/mp.png';
 import { Element } from 'react-scroll';
 
-const MidContainer = () => {
+const SkillContainer = () => {
   return (
-    <Element name="middle" className="container-with-separator mid_container">
+    <Element name="middle" className="container-with-separator skill-container">
       <br /><br />
       <div className="profile">
         <img src={mp} alt="my pic obviously" height="300px" width="300px" />
@@ -35,4 +35,4 @@ const MidContainer = () => {
   );
 };
 
-export default MidContainer;
+export default SkillContainer;

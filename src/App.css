@@ -131,12 +131,17 @@ hr {
   top: 200px;
 }
 
-.mid_container {
+.skill-container {
   background-color: antiquewhite;
   margin-top: 0;
   position: relative;
 }
 
+.project-container {
+  background-color: blanchedalmond;
+  margin-top: 0;
+  position: relative;
+}
 /* parent----
   1. is relative to top-container
   2.contains the foreground king and the background castle,
@@ -165,7 +170,7 @@ hr {
   padding-bottom: 50px;
 }
 
-/* skills div inside mid_container */
+/* skills div inside skill-container */
 .skills {
   display: flex;
 }
@@ -178,5 +183,5 @@ hr {
 .bottom_container {
   position: relative;
   /* top: -28px; */
-  background-color: blanchedalmond;
+  background-color: bisque;
 }
