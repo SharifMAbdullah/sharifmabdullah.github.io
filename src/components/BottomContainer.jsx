@@ -17,8 +17,6 @@ const BottomContainer = () => {
       <a className="footer-link" target="_blank" href="https://www.linkedin.com/in/sharif-mohammad-abdullah-396487214/">LinkedIn</a>
       <a className="footer-link" target="_blank" href="https://github.com/SharifMAbdullah/">Github</a>
       <p>© Sharif Mohammad Abdullah.</p>
-      {/* <br /><br /> */}
-      {/* <div className="separator"></div> */}
     </Element>
   );
 };

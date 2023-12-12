@@ -116,7 +116,7 @@ hr {
     border-color: #ffffff;
     margin: 0;
 }
-/* containers are for dividing the page into three parts */
+
 .top_container {
   height: 100%;
   background-color: linen;
@@ -131,6 +131,17 @@ hr {
   top: 200px;
 }
 
+/* skills div inside skill-container */
+.skills {
+  display: flex;
+}
+
+.skill-row {
+  flex: 1;
+  padding: 1em;
+  text-align: center;
+}
+
 .skill-container {
   background-color: antiquewhite;
   margin-top: 0;
@@ -141,6 +152,14 @@ hr {
   background-color: blanchedalmond;
   margin-top: 0;
   position: relative;
+}
+
+.project-image{
+
+  clip-path: circle(50%);
+  height: 350px;
+  width: 350px;
+  /* margin-bottom: 300px; */
 }
 /* parent----
   1. is relative to top-container
@@ -168,16 +187,6 @@ hr {
 
 .profile {
   padding-bottom: 50px;
-}
-
-/* skills div inside skill-container */
-.skills {
-  display: flex;
-}
-
-.skill-row {
-  flex: 1;
-  padding: 1em;
 }
 
 .bottom_container {
