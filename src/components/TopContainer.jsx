@@ -6,9 +6,9 @@ import { Element } from 'react-scroll';
 const TopContainer = () => {
   return (
     <Element name="top" className="top_container">
-      <div className="parent">
-        <img className="bg" src={castle} alt="background" />
-        <img className="fg" src={king} height="250px" width="300px" alt="king" />
+      <div className="image-stack-container">
+        <img className="stack-bg" src={castle} alt="background" />
+        <img className="stack-fg" src={king} height="250px" width="300px" alt="king" />
       </div>
       <br /><br />
       <div className="intro">

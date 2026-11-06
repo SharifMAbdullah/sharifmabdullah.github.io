@@ -1,76 +1,65 @@
-html {
-  height: 100%;
-  min-height: 100%;
-  padding: 0px;
-  margin: 0px;
-  max-width:99.66%;
+:root {
+  /* Palette & Themes */
+  --bg-top: linen;
+  --bg-research: #F5EBE6;
+  --research-accent: #8C5A48;
+  --card-bg-research: rgba(255, 255, 255, 0.7);
+
+  --bg-experience: #EADBC8;
+  --experience-accent: #5C6B57;
+  --card-bg-experience: rgba(253, 248, 242, 0.75);
+
+  --bg-skills: antiquewhite;
+  --bg-projects: blanchedalmond;
+  --bg-bottom: bisque;
+
+  --text-heading: #e09b52;
+  --text-body: #2f4f4f;
+  --link-color: darkolivegreen;
+  --link-hover: cadetblue;
+
+  --card-bg: rgba(255, 255, 255, 0.65);
+  --card-border: rgba(207, 133, 4, 0.15);
+  --card-shadow: 0 4px 20px rgba(148, 95, 5, 0.08);
 }
 
+* {
+  box-sizing: border-box;
+}
+
+html,
 body {
   height: 100%;
-  margin: 0px;
+  margin: 0;
+  padding: 0;
   text-align: center;
 }
 
-/* button */
-.btn {
-  -webkit-border-radius: 28;
-  -moz-border-radius: 28;
-  background: #cf8504;
-  background-image: -webkit-linear-gradient(top, #cf8504, #945f05);
-  background-image: -moz-linear-gradient(top, #cf8504, #945f05);
-  background-image: -ms-linear-gradient(top, #cf8504, #945f05);
-  background-image: -o-linear-gradient(top, #cf8504, #945f05);
-  background-image: linear-gradient(to bottom, #cf8504, #945f05);
-  border-radius: 8px;
-  color: #ffffff;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 20px;
-  text-decoration: none;
-  padding: 10px 20px 10px 20px;
-}
-
-.btn:hover {
-  background: #a66805;
-  background-image: -webkit-linear-gradient(top, #a66805, #573501);
-  background-image: -moz-linear-gradient(top, #a66805, #573501);
-  background-image: -ms-linear-gradient(top, #a66805, #573501);
-  background-image: -o-linear-gradient(top, #a66805, #573501);
-  background-image: linear-gradient(to bottom, #a66805, #573501);
-  color: #ffffff;
-  text-decoration: none;
-}
-
-/* text stuff */
+/* Typography */
 a {
-  color: darkolivegreen;
+  color: var(--link-color);
   font-family: 'Times New Roman', Times, serif;
   padding: 5px;
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 a:hover {
-  color: cadetblue;
+  color: var(--link-hover);
 }
 
 h1,
 h2,
 h3,
 h4 {
-  color: rgb(241, 173, 114);
+  color: var(--text-heading);
   font-family: 'Raleway', sans-serif;
   margin: 0;
 }
 
-p {
-  color: darkslategrey;
-}
-
-/* the name */
 h1 {
-  color: rgb(222, 184, 135);
   font-size: 5rem;
-  margin: 50px auto 0 auto;
+  margin: 50px auto 0;
 }
 
 h2 {
@@ -82,115 +71,159 @@ h3 {
 }
 
 p {
+  color: var(--text-body);
   font-family: 'Poppins', sans-serif;
   font-size: 1.2rem;
   line-height: 1.5;
-  margin: 15px auto 0 auto;
+  margin: 15px auto 0;
 }
 
 hr {
-  color: #ffffff;
-  border: solid;
-  border-color: #ffffff;
+  border: 0;
+  border-top: 1px solid #ffffff;
   margin: 0;
-  padding: 0.5px;
 }
 
+/* Base Button */
+.btn {
+  display: inline-block;
+  background: linear-gradient(to bottom, #cf8504, #945f05);
+  border-radius: 8px;
+  color: #ffffff;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: linear-gradient(to bottom, #a66805, #573501);
+  color: #ffffff;
+}
+
+/* Navigation & Layout */
 .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #ffffff;
-    z-index: 1000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #ffffff;
+  z-index: 1000;
 }
 
 .separator {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 0.5px;
-    background-color: #ffffff;
-    padding: 0.5px;
-    border: solid;
-    border-color: #ffffff;
-    margin: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #ffffff;
 }
 
 .top_container {
-  height: 100%;
-  background-color: linen;
-  padding-top: 10px;
-  padding-bottom: 45vh;
+  min-height: 100vh;
+  background-color: var(--bg-top);
+  padding: 100px 20px 45vh;
   position: relative;
 }
 
-/* hello and nickname */
-.intro {
+.research-container {
+  background-color: var(--bg-research);
+  padding: 80px 20px;
   position: relative;
-  top: 200px;
 }
 
-/* skills div inside skill-container */
-.skills {
-  display: flex;
-}
-
-.skill-row {
-  flex: 1;
-  padding: 1em;
-  text-align: center;
+.experience-container {
+  background-color: var(--bg-experience);
+  padding: 80px 20px;
+  position: relative;
 }
 
 .skill-container {
-  background-color: antiquewhite;
-  margin-top: 0;
+  background-color: var(--bg-skills);
+  padding: 80px 20px;
   position: relative;
 }
 
 .project-container {
-  background-color: blanchedalmond;
-  margin-top: 0;
+  background-color: var(--bg-projects);
+  padding: 80px 20px;
   position: relative;
-}
-
-.project-image{
-
-  clip-path: circle(50%);
-  height: 350px;
-  width: 350px;
-  /* margin-bottom: 300px; */
-}
-/* parent----
-  1. is relative to top-container
-  2.contains the foreground king and the background castle,
-  creating a group(div) together */
-.parent {
-  display: inline-block;
-  position: relative;
-  padding-top: 0px;
-  top: 100px;
-}
-
-.bg {
-  position: relative;
-  top: 100px
-}
-
-.fg {
-  position: absolute;
-  top: 250px;
-  left: 55px;
-  height: 150px;
-  width: 150px;
-}
-
-.profile {
-  padding-bottom: 50px;
 }
 
 .bottom_container {
+  background-color: var(--bg-bottom);
+  padding: 40px 20px;
   position: relative;
-  /* top: -28px; */
-  background-color: bisque;
+}
+
+/* Cards & Media */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  max-width: 1100px;
+  margin: 40px auto 0;
+  padding: 0 20px;
+}
+
+.soft-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 30px 24px;
+  box-shadow: var(--card-shadow);
+  text-align: left;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.soft-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(148, 95, 5, 0.12);
+}
+
+.project-image {
+  clip-path: circle(50%);
+  height: 160px;
+  width: 160px;
+  object-fit: cover;
+  margin: 0 auto 20px auto;
+  display: block;
+}
+
+.card-tag {
+  display: inline-block;
+  background-color: rgba(207, 133, 4, 0.12);
+  color: #945f05;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 12px;
+  margin-top: 12px;
+  margin-right: 6px;
+}
+
+.image-stack-container {
+  position: relative;
+  display: inline-block;
+  margin: 20px auto;
+}
+
+.stack-bg {
+  display: block;
+  width: 300px;
+  /* Adjust size to fit your layout */
+  height: auto;
+}
+
+.stack-fg {
+  position: absolute;
+  bottom: -15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: auto;
+  z-index: 2;
 }

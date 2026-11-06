@@ -8,7 +8,7 @@ const BottomContainer = () => {
       <div className="contact-me">
         <h2>Get In Touch</h2>
         <br /><br />
-        <h3>Want to get to know more about a greenie?</h3>
+        <h3>Want to connect?</h3>
         <p>Follow the links!</p>
         <br />
         <a className="btn" href="mailto:bsse1211@iit.du.ac.bd">CONTACT ME</a>

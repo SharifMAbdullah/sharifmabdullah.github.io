@@ -1,35 +1,42 @@
-import React from 'react';
-import mp from '../assets/mp.png';
-import { Element } from 'react-scroll';
+import React from "react";
+import mp from "../assets/mp.png";
+import { Element } from "react-scroll";
+
+const skillCategories = [
+  {
+    title: "LLM & AI",
+    description:
+      "Researching to make AI safe, responsible and hoping it doesn't wake up one day and decide to wipeout us",
+  },
+  {
+    title: "Networks",
+    description:
+      "Getting my hands dirty on the backbone of internet",
+  },
+  {
+    title: "Software Engineering",
+    description:
+      "Building softwares for customers, friends and myself",
+  },
+];
 
 const SkillContainer = () => {
   return (
-    <Element name="middle" className="container-with-separator skill-container">
-      <br /><br />
-      <div className="profile">
-        <img src={mp} alt="my pic obviously" height="300px" width="300px" />
-        <p><em>Student at the University of Dhaka and Lord of Nowhere.</em></p>
-        <p>I do stuff, from basic HTML to Natural Language Processing.</p>
-      </div>
+    <Element name="middle" className="skill-container">
       <h2>My Skills</h2>
-      <div className="skills">
-        <div className="skill-row">
-          <img className="" src="" alt="" />
-          <h3>Web Technology</h3>
-          <p>Fullstack development, but more focused on Backend</p>
-        </div>
-        <div className="skill-row">
-          <img className="" src="" alt="" />
-          <h3>System Design & DevOps</h3>
-          <p>Love to do system design and turning them into reality!</p>
-        </div>
-        <div className="skill-row">
-          <img className="" src="" alt="" />
-          <h3>Competitive Programming</h3>
-          <p>Not an expert, but practicing</p>
-        </div>
+      <p style={{ maxWidth: "600px" }}>
+        I tinker with many things, from server hardwares to natural language processing!
+      </p>
+
+      <div className="card-grid">
+        {skillCategories.map((skill, index) => (
+          <div className="soft-card" key={index}>
+            <h3>{skill.title}</h3>
+            <p>{skill.description}</p>
+          </div>
+        ))}
       </div>
-      <br />
+
       <div className="separator"></div>
     </Element>
   );

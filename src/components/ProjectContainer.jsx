@@ -1,45 +1,79 @@
-import React from 'react';
-import pos from '../assets/pos.png';
-import ln from '../assets/ln.png';
-import ekunjo from '../assets/ekunjo.png';
-import boy from '../assets/boy.png'
+import React from "react";
+import pos from "../assets/pos.png";
+import ln from "../assets/ln.png";
+import ekunjo from "../assets/ekunjo.png";
+import guy from "../assets/guy.png";
 import { Element } from "react-scroll";
+
+const projectsList = [
+  {
+    title: "Parts of Speech Tagger",
+    description: "Tagging Bangla Parts of Speech with a B+ tree dictionary",
+    image: pos,
+    tags: ["C"],
+    link: "https://github.com/SharifMAbdullah/Bangla-Parts-of-Speech-Tagger",
+  },
+  {
+    title: "Breaking the Silence",
+    description: "Bangla Text-to-Gloss translation",
+
+    tags: ["AI", "Finetuning"],
+    link: "https://huggingface.co/spaces/ayhay/Bangla-Text2Gloss-Translation",
+  },
+  // {
+  //   title: "Ekunjo",
+  //   description:
+  //     "An interactive platform emphasizing structured data presentation and user-friendly navigation flows.",
+  //   image: ekunjo,
+  //   tags: ["JavaScript", "Components"],
+  // },
+];
 
 const ProjectContainer = () => {
   return (
-    <Element name="project" className="container-with-separator project-container">
-      <br /><br />
-      <div className="project-intro">
-        <img src={boy} height="300px" width="300px" alt="" />
-        <br />
+    <Element name="project" className="project-container">
+      <div style={{ marginBottom: "20px" }}>
+        <img
+          src={guy}
+          style={{
+            height: "180px",
+            width: "180px",
+            objectFit: "cover",
+            borderRadius: "50%",
+          }}
+          alt="Avatar"
+        />
         <h2>Projects I Have Completed</h2>
+        <p style={{ maxWidth: "600px", margin: "15px auto 0" }}>
+          A selection of applications and interfaces I've built.
+        </p>
       </div>
-      <div className='skills'>
-        <div className="skill-row">
-          <h3>Bangla Parts of Speech Detector</h3>
-          <p>Tags Bangla words with appropriate parts of speech
-              using a stemmer and a B+ tree
-          </p>
-          <br />
-          <img className='project-image' src={pos} alt="" />
-        </div>
-        <div className="skill-row">
-          <img className="" src="" alt="" />
-          <h3>Mock Linkedin</h3>
-          <p>A simple implementation of Linkedin that heavily focuses on
-            architecture design and implementing microservices
-          </p>
-          <br />
-          <img className='project-image' src={ln} alt="" />
-        </div>
-        <div className="skill-row">
-          <h3>Ekunjo</h3>
-          <p>A one stop solution for all your gardening needs!</p>
-          <br /><br />
-          <img className='project-image' src={ekunjo} alt="" />
-        </div>
+
+      <div className="card-grid">
+        {projectsList.map((project, index) => (
+          <div
+            className="soft-card"
+            key={index}
+            style={{ textAlign: "center" }}
+          >
+            <img
+              className="project-image"
+              src={project.image}
+              alt={project.title}
+            />
+            <h3 style={{ textAlign: "left" }}>{project.title}</h3>
+            <p style={{ textAlign: "left" }}>{project.description}</p>
+            <div style={{ textAlign: "left", marginTop: "16px" }}>
+              {project.tags.map((tag, tIndex) => (
+                <span className="card-tag" key={tIndex}>
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
-      <br />
+
       <div className="separator"></div>
     </Element>
   );
